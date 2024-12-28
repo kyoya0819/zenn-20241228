@@ -21,9 +21,10 @@
 
 ## 実行方法
 
-あらかじめ依存関係のインストールと、Dockerコンテナは起動しておいてください。
+あらかじめ環境変数のコピーと、依存関係のインストールと、Dockerコンテナは起動しておいてください。
 
 ```bash
+$ cp .env.sample .env
 $ bun install
 $ docker compose up
 ```
