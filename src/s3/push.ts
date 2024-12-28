@@ -7,10 +7,10 @@ const s3client = new S3Client({
 const key = "test.txt";
 const body = "This is body.";
 
-s3client.send(new PutObjectCommand({
+await s3client.send(new PutObjectCommand({
     Bucket: process.env.S3_BUCKET,
     Key: key,
     Body: body
-})).then(() => {
-    console.log("success");
-});
+}));
+
+console.log("success");

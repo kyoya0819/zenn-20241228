@@ -12,12 +12,11 @@ const command = new GetObjectCommand({
     Key: key
 });
 
-const signedUrl = getSignedUrl(
+const signedUrl = await getSignedUrl(
     s3client,
     command,
     {
         expiresIn: 60 * 60 * 24 * 7 // 1週間 + 5分
     }
-).then(url => {
-    console.log(url);
-});
+);
+console.log(signedUrl);
