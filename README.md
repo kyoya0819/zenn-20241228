@@ -60,3 +60,8 @@ $ curl --silent "http://localhost:4566/_aws/ses?email=noreply@example.com" | jq 
       ...
 // ↑ 自分が送信したメッセージが確認できればOK
 ```
+
+## Links
+
+- Zenn記事: https://zenn.dev/kyoya0819/articles/0fea37c6709d8d
+- 𝕏: https://x.com/kyoya0819
