@@ -1,0 +1,25 @@
+services:
+
+    localstack:
+        container_name: app-localstack
+        image: localstack/localstack
+        ports:
+            - "4566:4566"
+        environment:
+            - SERVICES=s3,ses
+            - PERSISTENCE=1
+            - DISABLE_CORS_CHECKS=1
+            - CORS_ALLOW_ORIGINS=*
+        volumes:
+            -   type: volume
+                source: app-localstack
+                target: /var/lib/localstack
+            -   type: bind
+                source: ./.docker/development/localstack
+                target: /etc/localstack/init
+            -   type: bind
+                source: /var/run/docker.sock
+                target: /var/run/docker.sock
+
+volumes:
+    app-localstack:
