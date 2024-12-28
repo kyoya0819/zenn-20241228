@@ -49,7 +49,7 @@ http://localhost:4566/test/test.txt?... // <- こうなってアクセスでき�
 
 ```bash
 $ bun src/ses/sendEmail.ts
-// 何も出なくてOK
+success // <- こうなればOK
 
 $ curl --silent "http://localhost:4566/_aws/ses?email=noreply@example.com" | jq .
 {

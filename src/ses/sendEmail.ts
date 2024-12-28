@@ -30,3 +30,5 @@ await sesClient.send(new SendEmailCommand({
         }
     }
 }));
+
+console.log("success");

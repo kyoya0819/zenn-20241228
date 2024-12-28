@@ -19,4 +19,5 @@ const signedUrl = await getSignedUrl(
         expiresIn: 60 * 60 * 24 * 7 // 1週間 + 5分
     }
 );
+
 console.log(signedUrl);
